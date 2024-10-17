@@ -6,10 +6,13 @@ fetch ("https://thronesapi.com/api/v2/Characters")
         console.log(e)
         const linha = `
             <tr>
-                <td>${e.}</td>
-                <td>${e.}</td>
-                <td>${e.}</td>
-                <td>${e.}</td>
+                <td>${e.id}</td>
+                <td>${e.firstName}</td>
+                <td>${e.lastName}</td>
+                <td>${e.fullName}</td>
+                <td>${e.title}</td>
+                <td>${e.family}</td>
+                <td><img src="${e.imageUrl}" alt=""></img></td>
             </tr>
         `
         document.querySelector('tbody').insertAdjacentHTML('beforeend', linha)
